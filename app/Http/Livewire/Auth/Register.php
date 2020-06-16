@@ -29,7 +29,7 @@ class Register extends Component
         $user = User::create($data);
 
         auth()->login($user);
-        
+
         return redirect('/');
     }
 
