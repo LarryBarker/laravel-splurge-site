@@ -18,7 +18,7 @@
                 </div>
                 <div class="flex-1 h-0 pt-5 pb-4 overflow-y-auto">
                     <div class="flex-shrink-0 flex items-center px-4">
-                        <img class="h-8 w-auto" src="/img/logos/workflow-logo-on-brand.svg" alt="Workflow">
+                        <img class="h-8 w-auto" src="/images/logo-light.svg" alt="Splurge">
                     </div>
                     <nav class="mt-5 px-2 space-y-1">
                         <a href="#" class="group flex items-center px-2 py-2 text-base leading-6 font-medium rounded-md text-white bg-indigo-900 focus:outline-none focus:bg-indigo-700 transition ease-in-out duration-150">
@@ -58,7 +58,7 @@
         <div class="flex flex-col w-64 border-r border-gray-200 bg-indigo-800">
             <div class="h-0 flex-1 flex flex-col pt-5 pb-4 overflow-y-auto">
                 <div class="flex items-center flex-shrink-0 px-4">
-                    <img class="h-7 w-auto" src="/img/logo-light.svg" alt="Surge Logo">
+                    <img class="h-16 w-auto mx-auto" src="/images/logo-light.svg" alt="Splurge">
                 </div>
                 <!-- Sidebar component, swap this element with another sidebar if you like -->
                 <nav class="mt-5 space-y-1 flex-1 px-2 bg-indigo-800">
