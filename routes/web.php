@@ -2,18 +2,19 @@
 
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+/**
+ * App Routes
+ */
+Route::middleware('auth')->group(function () {
+    Route::redirect('/', 'dashboard');
 
-Route::get('/', function() {
-    return ['success!'];
+    Route::livewire('/dashboard', 'dashboard');
 });
-Route::livewire('register', 'auth.register');
+
+/**
+ * Authentication
+ */
+Route::middleware('guest')->group(function () {
+    Route::livewire('/login', 'auth.login')->layout('layouts.auth')->name('auth.login');
+    Route::livewire('/register', 'auth.register')->layout('layouts.auth')->name('auth.register');
+});
