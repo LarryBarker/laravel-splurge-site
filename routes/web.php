@@ -9,6 +9,7 @@ Route::middleware('auth')->group(function () {
     Route::redirect('/', 'dashboard');
 
     Route::livewire('/dashboard', 'dashboard');
+    Route::livewire('/profile', 'profile');
 });
 
 /**
