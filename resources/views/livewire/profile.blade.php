@@ -8,13 +8,10 @@
             </x-input.group>
 
             <x-input.group label="About" for="username" :error="$errors->first('username')" help-text="Write a few sentences about yourself.">
-                <x-input.textarea wire:model=" about" id="username" />
+                <x-input.textarea wire:model="about" id="photo" />
             </x-input.group>
 
-            <div class="mt-6 sm:mt-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:items-center sm:border-t sm:border-gray-200 sm:pt-5">
-                <label for="photo" class="block text-sm leading-5 font-medium text-gray-700">
-                    Photo
-                </label>
+            <x-input.group label="Photo" for="photo">
                 <div class="mt-2 sm:mt-0 sm:col-span-2">
                     <div class="flex items-center">
                         <span class="h-12 w-12 rounded-full overflow-hidden bg-gray-100">
@@ -29,7 +26,7 @@
                         </span>
                     </div>
                 </div>
-            </div>
+            </x-input.group>
         </div>
 
         <div class="mt-8 border-t border-gray-200 pt-5">
