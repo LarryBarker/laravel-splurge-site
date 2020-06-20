@@ -2,23 +2,14 @@
     <h1 class="text-2xl font-semibold text-gray-900">Profile</h1>
 
     <form wire:submit.prevent="save">
-        <div class="mt-6 sm:mt-5">
+        <div class="mt-6 sm:mt-5 space-y-6">
             <x-input.group label="Username" for="username" :error="$errors->first('username')">
                 <x-input.text wire:model="username" id="username" leading-add-on="splurge.com/" />
             </x-input.group>
 
-            <div class="mt-6 sm:mt-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
-                <label for="about" class="block text-sm font-medium leading-5 text-gray-700 sm:mt-px sm:pt-2">
-                    About
-                </label>
-                <div class="mt-1 sm:mt-0 sm:col-span-2">
-                    <div class="max-w-lg flex rounded-md shadow-sm">
-                        <textarea wire:model="about" id="about" rows="3" class="form-textarea block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"></textarea>
-                    </div>
-                    @error('about') <div class="mt-1 text-red-500 text-sm">{{ $message }}</div> @enderror
-                    <p class="mt-2 text-sm text-gray-500">Write a few sentences about yourself.</p>
-                </div>
-            </div>
+            <x-input.group label="About" for="username" :error="$errors->first('username')" help-text="Write a few sentences about yourself.">
+                <x-input.textarea wire:model=" about" id="username" />
+            </x-input.group>
 
             <div class="mt-6 sm:mt-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:items-center sm:border-t sm:border-gray-200 sm:pt-5">
                 <label for="photo" class="block text-sm leading-5 font-medium text-gray-700">

@@ -1,7 +1,8 @@
 @props([
     'label',
     'for',
-    'error' => false
+    'error' => false,
+    'helpText' => false
 ])
 
 <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
@@ -15,6 +16,10 @@
 
         @if ($error)
             <div class="mt-1 text-red-500 text-sm">{{ $error }}</div>
+        @endif
+
+        @if ($helpText)
+            <p class="mt-2 text-sm text-gray-500">{{ $helpText }}</p>
         @endif
     </div>
 
