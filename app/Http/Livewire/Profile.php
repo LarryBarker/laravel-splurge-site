@@ -32,7 +32,7 @@ class Profile extends Component
 
         auth()->user()->update($profileData);
 
-        $this->saved = true;
+        $this->dispatchBrowserEvent('notify', 'Profile saved!');
     }
 
     public function render()

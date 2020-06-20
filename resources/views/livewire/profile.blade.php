@@ -23,7 +23,6 @@
                                     </div>
                                     <div class="ml-4 flex-shrink-0 flex">
                                         <button
-                                            wire:click="$set('saved', false)"
                                             type="button"
                                             class="inline-flex text-gray-400 focus:outline-none focus:text-gray-500 transition ease-in-out duration-150">
                                             <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
