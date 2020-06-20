@@ -41,6 +41,36 @@ class ProfileTest extends TestCase
     }
 
     /** @test */
+    function profile_info_is_pre_populated()
+    {
+        $user = factory(User::class)->create([
+            'username' => 'foo',
+            'about' => 'bar'
+        ]);
+
+        Livewire::actingAs($user)
+            ->test('profile')
+            ->assertSet('username', 'foo')
+            ->assertSet('about', 'bar')
+            ->call('save');
+    }
+
+    /** @test */
+    function message_is_shown_on_save()
+    {
+        $user = factory(User::class)->create([
+            'username' => 'foo',
+            'about' => 'bar'
+        ]);
+
+        Livewire::actingAs($user)
+            ->test('profile')
+            ->assertDontSee('Profile saved!')
+            ->call('save')
+            ->assertSee('Profile saved!');
+    }
+
+    /** @test */
     function username_must_be_less_than_24_characters()
     {
         $user = factory(User::class)->create();
@@ -53,16 +83,16 @@ class ProfileTest extends TestCase
             ->assertHasErrors(['username' => 'max']);
     }
 
-        /** @test */
-        function username_must_be_less_than_140_characters()
-        {
-            $user = factory(User::class)->create();
-    
-            Livewire::actingAs($user)
-                ->test('profile')
-                ->set('username', 'foo')
-                ->set('about', str_repeat('a', 141))
-                ->call('save')
-                ->assertHasErrors(['about' => 'max']);
-        }
+    /** @test */
+    function username_must_be_less_than_140_characters()
+    {
+        $user = factory(User::class)->create();
+
+        Livewire::actingAs($user)
+            ->test('profile')
+            ->set('username', 'foo')
+            ->set('about', str_repeat('a', 141))
+            ->call('save')
+            ->assertHasErrors(['about' => 'max']);
+    }
 }
