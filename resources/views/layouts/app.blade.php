@@ -35,7 +35,7 @@
                         <img class="h-8 w-auto" src="/images/logo-light.svg" alt="Splurge">
                     </div>
                     <nav class="mt-5 px-2 space-y-1">
-                        <a href="#"
+                        <a href="/dashboard"
                             class="group flex items-center px-2 py-2 text-base leading-6 font-medium rounded-md text-white bg-indigo-900 focus:outline-none focus:bg-indigo-700 transition ease-in-out duration-150">
                             <svg class="mr-4 h-6 w-6 text-indigo-400 group-hover:text-indigo-300 group-focus:text-indigo-300 transition ease-in-out duration-150"
                                 stroke="currentColor" fill="none" viewBox="0 0 24 24">
@@ -48,7 +48,7 @@
                     </nav>
                 </div>
                 <div class="flex-shrink-0 flex border-t border-indigo-700 p-4">
-                    <a href="#" class="flex-shrink-0 group block focus:outline-none">
+                    <a href="/profile" class="flex-shrink-0 group block focus:outline-none">
                         <div class="flex items-center">
                             <div>
                                 <img class="inline-block h-10 w-10 rounded-full"
@@ -83,7 +83,7 @@
                 </div>
                 <!-- Sidebar component, swap this element with another sidebar if you like -->
                 <nav class="mt-5 space-y-1 flex-1 px-2 bg-indigo-800">
-                    <a href="#"
+                    <a href="/dashboard"
                         class="group flex items-center px-2 py-2 text-sm leading-5 font-medium text-white rounded-md bg-indigo-900 focus:outline-none focus:bg-indigo-700 transition ease-in-out duration-150">
                         <svg class="mr-3 h-6 w-6 text-indigo-400 group-focus:text-indigo-300 transition ease-in-out duration-150"
                             stroke="currentColor" fill="none" viewBox="0 0 24 24">
@@ -97,7 +97,7 @@
             </div>
 
             <div class="flex-shrink-0 flex border-t border-indigo-700 p-4">
-                <a href="#" class="flex-shrink-0 w-full group block">
+                <a href="/profile" class="flex-shrink-0 w-full group block">
                     <div class="flex items-center">
                         <div>
                             <img class="inline-block h-9 w-9 rounded-full"
