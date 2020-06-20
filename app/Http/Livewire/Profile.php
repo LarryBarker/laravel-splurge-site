@@ -6,7 +6,6 @@ use Livewire\Component;
 
 class Profile extends Component
 {
-    public $saved = false;
     public $username = '';
     public $about = '';
 
@@ -14,13 +13,6 @@ class Profile extends Component
     {
         $this->username = auth()->user()->username;
         $this->about = auth()->user()->about;
-    }
-
-    public function updated($field)
-    {
-        if ($field !== 'saved') {
-            $this->saved = false;
-        }
     }
 
     public function save()
@@ -32,7 +24,7 @@ class Profile extends Component
 
         auth()->user()->update($profileData);
 
-        $this->dispatchBrowserEvent('notify', 'Profile saved!');
+        $this->emitSelf('notify-saved');
     }
 
     public function render()
