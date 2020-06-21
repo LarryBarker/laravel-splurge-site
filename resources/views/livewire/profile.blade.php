@@ -26,9 +26,6 @@
                     @endif
                 </span>
                 <x-input.filepond wire:model="newAvatar" />
-                <!-- <x-input.file-upload wire:model="newAvatar" id="photo">
-
-                </x-input.avatar> -->
             </x-input.group>
 
         </div>
