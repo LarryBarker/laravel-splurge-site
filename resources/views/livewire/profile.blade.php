@@ -18,15 +18,17 @@
             </x-input.group>
 
             <x-input.group label="Photo" for="photo" :error="$errors->first('newAvatar')">
-                <x-input.file-upload wire:model="newAvatar" id="photo">
-                    <span class="h-12 w-12 rounded-full overflow-hidden bg-gray-100">
-                        @if ($newAvatar)
-                            <img src="{{ $newAvatar->temporaryUrl() }}" alt="Profile photo">
-                        @else
-                            <img src="{{ auth()->user()->avatarUrl() }}" alt="Profile photo">
-                        @endif
-                    </span>
-                </x-input.avatar>
+                <span class="h-12 w-12 rounded-full overflow-hidden bg-gray-100">
+                    @if ($newAvatar)
+                    <img src="{{ $newAvatar->temporaryUrl() }}" alt="Profile photo">
+                    @else
+                    <img src="{{ auth()->user()->avatarUrl() }}" alt="Profile photo">
+                    @endif
+                </span>
+                <x-input.filepond wire:model="newAvatar" />
+                <!-- <x-input.file-upload wire:model="newAvatar" id="photo">
+
+                </x-input.avatar> -->
             </x-input.group>
 
         </div>

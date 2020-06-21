@@ -21,11 +21,6 @@ class Profile extends Component
         $this->birthday = optional(auth()->user()->birthday)->format('m/d/Y');
     }
 
-    public function updatedNewAvatar()
-    {
-        $this->validate([ 'newAvatar' => 'image|max:1000' ]);
-    }
-
     public function save()
     {
         $this->validate([
